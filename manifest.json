@@ -9,5 +9,5 @@
         "16": "to do list.png"
       }
     },
-    "permissions": ["https://sheetdb.io/*"]
+    "permissions": ["activeTab", "scripting","https://sheetdb.io/*"]
   }

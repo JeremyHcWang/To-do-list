@@ -19,12 +19,23 @@
     <h1>To do list!</h1>
     <h3>Please input your topic here so that you know what this task is about</h3>
     <div class ="topic-container">
-        <input type = "text" placeholder="Type your topic here, can be one word." >
+        <input type = "text"  id="topic-input" placeholder="Type your topic here, can be one word.">
     </div>
+    <h3>Explain in one sentence what you need to do for the topic here.</h3>
     <div class ="task-container">
-        <input type = "text" placeholder="Type your task here." >
+        <input type = "text"  id="task-input" placeholder="Type your task here.">
     </div>
-    <button onclick="sendDataToSheetDB()">Save to SheetDB</button>
+    <!--this didn't work on extensions -->
+    <!--the console log in our js file was not being touched therefor this button was not working-->
+    <!-- <button onclick="sendDataToSheetDB()">Save to SheetDB</button> -->
+    <button id="saveDb">Save to SheetDB</button>
+    <!--the button below is our test to see if onclick works with extensions, it does not.-->
+    <!-- <button onclick="testFunc()">test button</button> -->
+
+
+
+
+
     <script src="popup.js"></script>
 </body>
 </html>
