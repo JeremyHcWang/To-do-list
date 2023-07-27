@@ -19,6 +19,19 @@
 // Saving saveDb button as a variable
 let saveDb = document.getElementById("saveDb");
 
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('https://sheetdb.io/api/v1/syjh4oitkkynm')
+  .then((data) => data.json())
+  .then((data) => {
+    let todo;
+    for (let i=0; i<data.length; i++) {
+      todo = data[i].Topic + ': ' + data[i].Task
+      document.querySelector('body').appendChild(document.createElement('div')).textContent =
+              todo;
+    }
+  })
+})
+
 // Adding an event listener to invoke sendDatatoSheetDB whenever saveDb button is clicked
 saveDb.addEventListener("click", () => {
   sendDataToSheetDB();
@@ -96,5 +109,5 @@ async function sendDataToSheetDB() {
       const saveButton = document.querySelector('button');
       saveButton.addEventListener('click',sendDataToSheetDB)
     });
-  }
+}
 
