@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list!</title>
     <style> 
-    .input-container{
+    .topic-container{
         border:  1px solid #ccc;
         padding: 10px;
         width: 50% 
@@ -15,7 +15,10 @@
 <body>
     <h1>To do list!</h1>
     <h3>Please input your topic here so that you know what this task is about</h3>
-    <div class ="input-container">
+    <div class ="topic-container">
+        <input type = "text" placeholder="Type your task here... can be one word." >
+    </div>
+    <div class ="task-container">
         <input type = "text" placeholder="Type your task here... can be one word." >
     </div>
     <button onclick="sendDataToSheetDB()">Save to SheetDB</button>
